@@ -1,0 +1,416 @@
+/* #009D91-основной цвет; #FFAE00- вторичный1; #F10026-вторичный2*/
+
+@font-face {
+    font-family: "GardensC";
+    src: url("../fonts/GardensC.otf");
+}
+*{font-family: "GardensC"; margin: 0; padding: 0;}
+
+
+/****************ШАПКА****************************/
+header{ 
+    
+    background-color:#91afad ;
+    margin: 0;
+    padding: 0;
+}
+.top{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around ;
+    margin: auto;
+    align-items: center;
+}
+.top img{
+    width: 200px;
+}
+ button{
+     font-size: 2em;
+     padding: 0.5em;
+     border-radius: 20px;
+     background-color: #00ff37 ;
+     outline: none;
+ }
+ button:active{
+     background-color:#F10026 ;
+ }
+
+ .top h2{
+     color:#00ff37 ;
+ }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+nav a{
+   text-decoration: none;
+   color: #00ff80;
+   font-size: 1.5em;
+   padding:20px;
+}
+
+nav a:hover{
+    color: #F10026;
+}
+
+
+ /*******************Общие свойства для всех блоков*********/
+ section{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+ }
+ .section h2{
+    text-align: center;
+    background-color: aqua; 
+}
+
+/**************************Наши преимущества**********************/
+ .advantage {
+     background-color: aqua;
+    
+ }
+  
+
+  .advantage .content{
+      display: flex;
+      justify-content: space-around;
+      padding: top 30px;
+      flex-wrap: wrap;
+  }
+  .advantage .item{
+      text-align: center;
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+  }
+  .advantage .img{
+      width: 50%;
+  }
+  .advantage .item:hover{
+      transform: scale(1.2);
+  }
+
+  /*********************Особенности********************************/
+  .features{
+      background-color: #91afad;
+     
+  }
+  .features .content{
+      display: flex;
+      justify-content: space-around;
+      padding-top: 30px;
+      font-size: larger;
+  }
+  ul.minus{
+      list-style-image: url("../img/minus.png");
+  }
+  ul.plus{
+      list-style-image: url("../img/plus.png");
+  }
+
+  /**************************Каталог*******************/
+
+  .catalog{
+      background-color:aqua;
+  }
+
+  .card{
+      border: solid 1px;
+      text-align:end;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5x rgb(0,0,0) ;
+  }
+  .card button{
+      font-size: 1,5em;
+      padding: 10px;
+  }
+
+  .price{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 50px;
+      row-gap: 50px;
+      
+  }
+
+  label{
+      border: solid 1px;
+      padding: 10px;
+      border-radius: 50px;
+      font-size: 1.5em;
+      background-color:#91afad;
+
+  }
+  .categories{
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      
+  }
+  .catalog input{
+      opacity: 0;
+      position:absolute;
+  }
+   /*кнопки на меню над товарами переключ*/
+   #giro:checked ~ .giro-conteiner,
+   #electro:checked ~ .electro-conteiner,
+   #segway:checked ~ .segway-conteiner
+      {
+       display:grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       column-gap: 50px;
+       row-gap: 50px;
+        }
+
+        #all:checked ~ .giro-conteiner,
+        #all:checked ~ .electro-conteiner,
+        #all:checked ~ .segway-conteiner
+           {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 50px;
+             }
+
+        
+   .giro-conteiner, .electro-conteiner, .segway-conteiner{
+       display: none;
+   }
+
+   .catalog img{
+       width:100%
+   }
+
+   /********Консультанты*********************/
+   .consultant{
+       background-color: #91afad;
+   }
+   .consultant .content{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       padding-top: 30px;
+   }
+   .consultant img{
+       width: 76%;
+       transition: transform 1s ease-in-out;
+   }
+   .consultant .cons{
+       font-size: 1.5em;
+       text-align: center;
+   }
+   .consultant img:hover{
+       transform: rotate(180grad);
+   }
+   /****************Бренды********************/
+   .brend{
+       background-color:aqua;
+   }
+   .brend .content{
+       display: flex;
+       justify-content: space-around;
+       padding-top: 30px;
+       flex-wrap: wrap;
+   }
+   .brend .content h2{
+       color: blueviolet;
+       font-size: 1.5em;
+       padding: 0 10px ;
+   }
+   /********************Полезная информация******************/
+
+   .info{
+       background-color:#91afad;
+       font-size: 1.5em;
+   }
+   .info .content{
+       display: flex;
+       flex-direction: column;
+   }
+
+   .info img{
+       width: 20%;
+       border-radius: 50%;
+   }
+
+   .info .item{
+       display: flex;
+       align-items: center;
+       padding: 30px;
+   }
+   .info p{
+       padding-left: 50px;
+   }
+   .right{
+       align-self: flex-end;
+       flex-direction: row-revers;
+   }
+   /***************Информация о компании************************/
+
+  .about{position: relative;}
+  
+   .back{
+       background-image: url("../img/about-us-bg.png");
+       position: absolute;
+       left: 0;
+       top: 0;
+       height: 100%;
+       width: 100%;
+       background-size: cover;
+       filter: opacity(50%);
+         }
+
+   .form{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+   }   
+   
+   .form input{
+       font-size: 1.5em;
+       padding: 15px;
+       border-radius: 25px;
+       outline: none;
+       text-align: center;
+   }
+    
+   .about p{
+       margin-top: 20px;
+       font-size: 1.5em;
+   }
+
+   /************Подвал***************************/
+ footer{
+     background-color: #91afad;
+     position:relative;
+
+ }
+
+ footer>a{
+     display: block;
+     background-color: aqua;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+ }
+
+ @media  screen and (max-width:1024px) {
+       #giro:checked ~ .giro-conteiner,
+       #electro:checked ~ .electro-conteiner,
+       #segway:checked ~ .segway-conteiner
+       {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+         }
+ 
+        #all:checked ~ .giro-conteiner,
+        #all:checked ~ .electro-conteiner,
+        #all:checked ~ .segway-conteiner
+        {
+         grid-template-columns: 1fr 1fr;
+         column-gap: 30px;
+         row-gap: 30px;
+         } 
+
+         .top{
+             padding: 0 10px;
+             }
+
+        footer top{
+            padding-bottom: 50px;
+        }
+
+}
+@media screen and (max-width:760px){
+
+       #giro:checked ~ .giro-conteiner,
+       #electro:checked ~ .electro-conteiner,
+       #segway:checked ~ .segway-conteiner
+       {
+        grid-template-columns: 1fr;     
+       }
+ 
+        #all:checked ~ .giro-conteiner,
+        #all:checked ~ .electro-conteiner,
+        #all:checked ~ .segway-conteiner
+        {
+         grid-template-columns: 1fr;       
+        }
+        
+        .top{
+            flex-direction: column;
+            }
+        .top .img, .top h2, .top button{
+                margin-top: 20px;
+            }
+        footer .top{
+            flex-direction: column-reverse;
+        }
+        footer img{
+            display: none;
+        }
+        nav{
+            flex-direction: column;
+        }
+        nav a{
+            text-align: center;
+        }
+
+        .features .content{
+            justify-content: flex-start;
+        }
+        .features h3{
+            margin-top: 50px;
+            flex-direction:column ;
+        }
+        .categories{
+            flex-direction: column;
+        }
+        .categories label{
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .container{
+            padding-top: 0;
+        }
+        .consultant .content{
+            grid-template-columns:  1fr;
+            
+        }
+
+        .info .item{
+            flex-direction: column-reverse;
+
+        }
+
+        .info img{
+            width: 100%;
+        }
+        .info p{
+            padding-left: 0;
+        }
+
+        .back{
+            display: none;
+        }
+
+        .form {
+            flex-direction: column;
+           
+        }
+        .form input, .form button{
+            width: 100%;
+            margin-top: 10px;
+        }
+}
